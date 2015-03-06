@@ -1,0 +1,31 @@
+{
+  "name": "substream-pump",
+  "version": "1.0.0",
+  "description": "because primus substreams don't have pipes :(",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjmehta/substream-pump.git"
+  },
+  "keywords": [
+    "substream",
+    "pipe",
+    "pump",
+    "streams",
+    "without",
+    "pipe",
+    "data",
+    "on",
+    "data",
+    "join"
+  ],
+  "author": "Tejesh Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjmehta/substream-pump/issues"
+  },
+  "homepage": "https://github.com/tjmehta/substream-pump"
+}
