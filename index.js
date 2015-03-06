@@ -13,11 +13,15 @@ function pump (readStream, writeStream, callback) {
   }
 
   readStream.addListener('data', function(chunk) {
-    if (writeStream.write(chunk) === false) readStream.pause();
+    if (writeStream.write(chunk) === false && readStream.pause) {
+      readStream.pause();
+    }
   });
 
   writeStream.addListener('drain', function() {
-    readStream.resume();
+    if (readStream.resume) {
+      readStream.resume();
+    }
   });
 
   readStream.addListener('end', function() {
@@ -29,12 +33,16 @@ function pump (readStream, writeStream, callback) {
   });
 
   readStream.addListener('error', function(err) {
-    writeStream.end();
+    if (writeStream.end) {
+      writeStream.end();
+    }
     call(err);
   });
 
   writeStream.addListener('error', function(err) {
-    readStream.destroy();
+    if (readStream.destroy) {
+      readStream.destroy();
+    }
     call(err);
   });
 }
