@@ -7,7 +7,7 @@ because primus substreams don't have pipes :(
 var pump = require('substream-pump');
 
 // callback is optional for errors or on readable close
-pump(streamOrSubstreamSource, substreamDest, cb);
+pump(streamOrSubstreamSource, streamOrSubstreamDest, cb);
 ```
 
 ##License
