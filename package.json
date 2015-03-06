@@ -1,6 +1,6 @@
 {
   "name": "substream-pump",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "because primus substreams don't have pipes :(",
   "main": "index.js",
   "scripts": {
